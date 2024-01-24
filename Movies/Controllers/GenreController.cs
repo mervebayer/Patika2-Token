@@ -12,11 +12,12 @@ using static Movies.Application.GenreOperations.Command.CreateGenre.CreateGenreC
 using Movies.Application.GenreOperations.Command.CreateGenre;
 using Movies.Application.MovieOperations.Command.UpdateGenre;
 using Movies.Application.MovieOperations.Command.DeleteGenre;
+using Microsoft.AspNetCore.Authorization;
 
 
 
 namespace Movies.Controllers;
-
+[Authorize]
 [ApiController]
 [Route("[controller]")]
 public class GenreController : ControllerBase

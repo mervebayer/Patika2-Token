@@ -5,6 +5,10 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies", "Movies\Movies.csproj", "{5335CE38-35EE-41EF-BDAB-DE9707DBE277}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E28969AF-BA4B-494C-917B-BC6CF17BC19B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.UnitTests", "Tests\Movies.UnitTests\Movies.UnitTests.csproj", "{433B98C8-84EF-4102-87EC-50BD9063B055}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,11 +19,18 @@ Global
 		{5335CE38-35EE-41EF-BDAB-DE9707DBE277}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5335CE38-35EE-41EF-BDAB-DE9707DBE277}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5335CE38-35EE-41EF-BDAB-DE9707DBE277}.Release|Any CPU.Build.0 = Release|Any CPU
+		{433B98C8-84EF-4102-87EC-50BD9063B055}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{433B98C8-84EF-4102-87EC-50BD9063B055}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{433B98C8-84EF-4102-87EC-50BD9063B055}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{433B98C8-84EF-4102-87EC-50BD9063B055}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {652E0FEB-D1B2-4FDF-8C55-616BBBF8C597}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{433B98C8-84EF-4102-87EC-50BD9063B055} = {E28969AF-BA4B-494C-917B-BC6CF17BC19B}
 	EndGlobalSection
 EndGlobal
