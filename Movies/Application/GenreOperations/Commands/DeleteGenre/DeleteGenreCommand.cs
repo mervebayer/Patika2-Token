@@ -8,9 +8,9 @@ namespace Movies.Application.MovieOperations.Command.DeleteGenre
 {
     public class DeleteGenreCommand
     {
-        private readonly MovieStoreDbContext dbContext;
+        private readonly IMovieStoreDbContext dbContext;
         public int GenreId {get; set;}
-        public DeleteGenreCommand(MovieStoreDbContext dbContext)
+        public DeleteGenreCommand(IMovieStoreDbContext dbContext)
         {
             this.dbContext = dbContext;
         }

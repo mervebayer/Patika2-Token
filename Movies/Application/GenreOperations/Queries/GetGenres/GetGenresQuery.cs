@@ -5,10 +5,10 @@ namespace Movies.Application.GenreOperations.Queries.GetGenres
 {
     public class GetGenresQuery
     {
-        private readonly MovieStoreDbContext dbContext;
+        private readonly IMovieStoreDbContext dbContext;
         private readonly IMapper mapper;
 
-        public GetGenresQuery(MovieStoreDbContext dbContext, IMapper mapper)
+        public GetGenresQuery(IMovieStoreDbContext dbContext, IMapper mapper)
         {
             this.dbContext = dbContext;
             this.mapper = mapper;

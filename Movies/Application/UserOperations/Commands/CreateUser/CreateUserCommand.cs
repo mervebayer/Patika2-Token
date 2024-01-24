@@ -12,9 +12,9 @@ namespace Movies.Application.MovieOperations.Command.CreateUser
     public class CreateUserCommand
     {
         public CreateUserModel Model { get; set; }
-        private readonly MovieStoreDbContext dbContext;
+        private readonly IMovieStoreDbContext dbContext;
         private readonly IMapper mapper;
-        public CreateUserCommand(MovieStoreDbContext dbContext,IMapper mapper)
+        public CreateUserCommand(IMovieStoreDbContext dbContext,IMapper mapper)
         {
             this.dbContext = dbContext;
             this.mapper = mapper;

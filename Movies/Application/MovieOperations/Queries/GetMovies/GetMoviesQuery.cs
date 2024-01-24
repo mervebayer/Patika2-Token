@@ -13,10 +13,10 @@ namespace Movies.Application.MovieOperations.Queries.GetMovies
 {
     public class GetMoviesQuery
     {
-        private readonly MovieStoreDbContext dbContext;
+        private readonly IMovieStoreDbContext dbContext;
         private readonly IMapper mapper;
 
-        public GetMoviesQuery(MovieStoreDbContext dbContext, IMapper mapper)
+        public GetMoviesQuery(IMovieStoreDbContext dbContext, IMapper mapper)
         {
             this.dbContext = dbContext;
             this.mapper = mapper;

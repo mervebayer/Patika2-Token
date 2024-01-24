@@ -9,9 +9,9 @@ namespace Movies.Application.MovieOperations.Commands.RefreshToken
     public class RefreshTokenCommand
     {
         public string RefreshToken { get; set;}
-        private readonly MovieStoreDbContext dbContext;
+        private readonly IMovieStoreDbContext dbContext;
         private readonly IConfiguration configuration;
-        public RefreshTokenCommand(MovieStoreDbContext dbContext, IConfiguration configuration)
+        public RefreshTokenCommand(IMovieStoreDbContext dbContext, IConfiguration configuration)
         {
             this.dbContext = dbContext;
             this.configuration = configuration;

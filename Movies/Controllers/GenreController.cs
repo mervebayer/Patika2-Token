@@ -22,10 +22,10 @@ namespace Movies.Controllers;
 [Route("[controller]")]
 public class GenreController : ControllerBase
 {
-    private readonly MovieStoreDbContext context;
+    private readonly IMovieStoreDbContext context;
     private readonly IMapper mapper;
 
-    public GenreController(MovieStoreDbContext context, IMapper mapper)
+    public GenreController(IMovieStoreDbContext context, IMapper mapper)
     {
         this.context = context;
         this.mapper = mapper;

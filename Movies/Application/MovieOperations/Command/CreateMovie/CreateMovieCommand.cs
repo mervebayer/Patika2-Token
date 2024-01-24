@@ -12,9 +12,9 @@ namespace Movies.Application.MovieOperations.Command.CreateMovie
     public class CreateMovieCommand
     {
         public CreateMovieModel Model { get; set; }
-        private readonly MovieStoreDbContext dbContext;
+        private readonly IMovieStoreDbContext dbContext;
         private readonly IMapper mapper;
-        public CreateMovieCommand(MovieStoreDbContext dbContext,IMapper mapper)
+        public CreateMovieCommand(IMovieStoreDbContext dbContext,IMapper mapper)
         {
             this.dbContext = dbContext;
             this.mapper = mapper;

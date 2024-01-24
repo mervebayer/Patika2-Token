@@ -8,9 +8,9 @@ namespace Movies.Application.MovieOperations.Command.DeleteMovie
 {
     public class DeleteMovieCommand
     {
-        private readonly MovieStoreDbContext dbContext;
+        private readonly IMovieStoreDbContext dbContext;
         public int MovieId {get; set;}
-        public DeleteMovieCommand(MovieStoreDbContext dbContext)
+        public DeleteMovieCommand(IMovieStoreDbContext dbContext)
         {
             this.dbContext = dbContext;
         }

@@ -12,9 +12,9 @@ namespace Movies.Application.GenreOperations.Command.CreateGenre
     public class CreateGenreCommand
     {
         public CreateGenreModel Model { get; set; }
-        private readonly MovieStoreDbContext dbContext;
+        private readonly IMovieStoreDbContext dbContext;
         private readonly IMapper mapper;
-        public CreateGenreCommand(MovieStoreDbContext dbContext,IMapper mapper)
+        public CreateGenreCommand(IMovieStoreDbContext dbContext,IMapper mapper)
         {
             this.dbContext = dbContext;
             this.mapper = mapper;

@@ -15,10 +15,10 @@ namespace Movies.Application.MovieOperations.Commands.CreateToken
     public class CreateTokenCommand
     {
         public CreateTokenModel Model { get; set; }
-        private readonly MovieStoreDbContext dbContext;
+        private readonly IMovieStoreDbContext dbContext;
         private readonly IMapper mapper;
         private readonly IConfiguration configuration;
-        public CreateTokenCommand(MovieStoreDbContext dbContext, IMapper mapper, IConfiguration configuration)
+        public CreateTokenCommand(IMovieStoreDbContext dbContext, IMapper mapper, IConfiguration configuration)
         {
             this.dbContext = dbContext;
             this.mapper = mapper;

@@ -11,10 +11,10 @@ namespace Movies.Application.MovieOperations.Queries.GetById
 {
     public class GetByIdQuery
     {
-        private readonly MovieStoreDbContext dbContext;
+        private readonly IMovieStoreDbContext dbContext;
         public int MovieId {get; set;}
         public readonly IMapper mapper;
-        public GetByIdQuery(MovieStoreDbContext dbContext, IMapper mapper)
+        public GetByIdQuery(IMovieStoreDbContext dbContext, IMapper mapper)
         {
             this.dbContext = dbContext;
             this.mapper = mapper;

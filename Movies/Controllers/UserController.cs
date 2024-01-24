@@ -17,11 +17,11 @@ namespace Movies.Controllers;
 [Route("[controller]s")]
 public class UserController : ControllerBase
 {
-    private readonly MovieStoreDbContext context;
+    private readonly IMovieStoreDbContext context;
     private readonly IMapper mapper;
     readonly IConfiguration configuration;
 
-    public UserController(MovieStoreDbContext context, IMapper mapper, IConfiguration configuration)
+    public UserController(IMovieStoreDbContext context, IMapper mapper, IConfiguration configuration)
     {
         this.context = context;
         this.mapper = mapper;

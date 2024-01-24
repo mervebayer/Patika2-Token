@@ -9,10 +9,10 @@ namespace Movies.Application.MovieOperations.Command.UpdateGenre
 {
     public class UpdateGenreCommand
     {
-        private readonly MovieStoreDbContext dbContext;
+        private readonly IMovieStoreDbContext dbContext;
         public int GenreId {get; set;}
         public UpdateGenreModel Model {get; set;}
-        public UpdateGenreCommand(MovieStoreDbContext dbContext)
+        public UpdateGenreCommand(IMovieStoreDbContext dbContext)
         {
             this.dbContext = dbContext;
         }

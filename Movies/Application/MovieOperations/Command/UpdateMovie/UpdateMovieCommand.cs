@@ -9,10 +9,10 @@ namespace Movies.Application.MovieOperations.Command.UpdateMovie
 {
     public class UpdateMovieCommand
     {
-        private readonly MovieStoreDbContext dbContext;
+        private readonly IMovieStoreDbContext dbContext;
         public int MovieId {get; set;}
         public UpdateMovieModel Model {get; set;}
-        public UpdateMovieCommand(MovieStoreDbContext dbContext)
+        public UpdateMovieCommand(IMovieStoreDbContext dbContext)
         {
             this.dbContext = dbContext;
         }
