@@ -5,6 +5,7 @@ using Movies.Application.MovieOperations.Queries.GetMovies;
 using static Movies.Application.MovieOperations.Command.CreateMovie.CreateMovieCommand;
 using Movies.Application.GenreOperations.Queries.GetGenres;
 using Movies.Application.GenreOperations.Queries.GetGenreDetail;
+using static Movies.Application.MovieOperations.Command.CreateUser.CreateUserCommand;
 
 namespace Movies.Common
 {
@@ -15,6 +16,7 @@ namespace Movies.Common
             CreateMap<Movie,MoviesViewModel>().ForMember(dest => dest.Genre, opt => opt.MapFrom(src => src.Genre.Name));
             CreateMap<Genre,GenresViewModel>();
             CreateMap<Genre,GenreDetailViewModel>();
+            CreateMap<CreateUserModel,User>();
         }
     }
 }
