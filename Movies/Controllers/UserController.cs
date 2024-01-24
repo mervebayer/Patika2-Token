@@ -7,6 +7,7 @@ using Movies.Application.MovieOperations.Command.CreateUser;
 using Movies.TokenOperations.Models;
 using Movies.Application.MovieOperations.Commands.CreateToken;
 using static Movies.Application.MovieOperations.Commands.CreateToken.CreateTokenCommand;
+using Movies.Application.MovieOperations.Commands.RefreshToken;
 
 
 
@@ -52,5 +53,16 @@ public class UserController : ControllerBase
         return token;
     }
 
+    [HttpGet("refreshtoken")]
+    public ActionResult<Token> RefreshToken([FromBody]string Token)
+    {
+        RefreshTokenCommand command = new(context, configuration)
+        {
+            RefreshToken = Token
+        };
+        var token =command.Handle();
+
+        return token;
+    }
 }
 

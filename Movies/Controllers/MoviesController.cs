@@ -12,11 +12,12 @@ using static Movies.Application.MovieOperations.Command.CreateMovie.CreateMovieC
 using FluentValidation;
 using FluentValidation.Results;
 using Movies.Entities;
+using Microsoft.AspNetCore.Authorization;
 
 
 
 namespace Movies.Controllers;
-
+[Authorize]
 [ApiController]
 [Route("[controller]")]
 public class MoviesController : ControllerBase
