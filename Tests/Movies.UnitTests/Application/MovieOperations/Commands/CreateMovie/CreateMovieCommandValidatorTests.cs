@@ -18,7 +18,7 @@ namespace Movies.UnitTests.Application.MovieOperations.Commands.CreateMovie
         [InlineData("lor", "",0)]
         [InlineData("Lord Of The Rings", "tr",0)]
         [InlineData(" ", "tur",0)]
-        public void WhenInvalidInputsAreGiven_Validator_ShouldBeReutnErrors(string title, string language, int genreId){
+        public void WhenInvalidInputsAreGiven_Validator_ShouldBeReturnErrors(string title, string language, int genreId){
 
            
             CreateMovieCommand command = new(null,null);
@@ -56,17 +56,17 @@ namespace Movies.UnitTests.Application.MovieOperations.Commands.CreateMovie
         public void WhenValidInpursIsGiven_Validator_ShouldBeNotReturnError(){
              CreateMovieCommand command = new(null,null);
             command.Model = new(){
-                Title = "Lord Of Thhe Rings",
-                Language = "tr",
+                Title = "Lord Of The Rings",
+                Language = "tur",
                 PublishDate = DateTime.Now.Date.AddYears(-2),
-                GenreId = 1
+                GenreId = 2
             };
 
             
             CreateMovieCommandValidator validator = new();
             var result = validator.Validate(command);
 
-            result.Errors.Count.Should().Equals(0);
+             result.Errors.Count.Should().Be(0);
         }
     }
 }
